@@ -6,6 +6,9 @@
     <title>@ViewData["Title"] - Client</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,6 +27,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Practice">Practice</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -37,12 +43,18 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Client - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+         @*   <h1 class="icon-footer">Client</h1>
+            <ul class="ul-footer">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Home/Privacy">Privacy</a></li>
+                <li><a href="/Practice">Practice</a></li>
+            </ul>*@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/latihan.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

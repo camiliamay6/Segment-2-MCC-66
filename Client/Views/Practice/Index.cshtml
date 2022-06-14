@@ -1,0 +1,134 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Practice 1";
+}
+
+<div class="text-center">
+    <h1 class="title">First Practice</h1>
+    @*    <ul id="list-pokemon">
+            <li></li>
+        </ul>*@
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody id="tabel-pokemon">
+        </tbody>
+    </table>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detail Pokemon</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="pokemon-name"></h1>
+                    <img class="pokemon-img" src="#" alt="Alternate Text" />
+                    <div class="pokemon-type">
+                    </div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="home-tab" data-toggle="tab" href="#stat" role="tab" aria-controls="home" aria-selected="true">Stat</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="profile-tab" data-toggle="tab" href="#abilities" role="tab" aria-controls="abilities" aria-selected="false">Abilities</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="contact-tab" data-toggle="tab" href="#encounters" role="tab" aria-controls="encounters" aria-selected="false">Encounters</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="stat" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="stat-name">HP</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" id="hp-value" role="progressbar" style="width: 25%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="stat-name">Att.</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" id="attack-value" role="progressbar" style="width: 25%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="stat-name">Def.</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" id="defense-value" role="progressbar" style="width: 25%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="stat-name">SP.Att</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" id="sp-attack-value" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="stat-name">SP.Def</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar" id="sp-defense-value" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="stat-name">Speed</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar" id="speed-value" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="abilities" role="tabpanel" aria-labelledby="profile-tab">
+
+                        </div>
+                        <div class="tab-pane fade" id="encounters" role="tabpanel" aria-labelledby="contact-tab">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
